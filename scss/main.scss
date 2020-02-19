@@ -1,0 +1,62 @@
+$mainColor: #dedede;
+$bodyText:  #634f5f;
+$mutedBodyText: #89aaa9;
+$fontWeight: (
+    "light":300,
+    "reg":400,
+    "med":700,
+    "bold":900
+);
+$fontFamily: 'Roboto', sans-serif;
+$margin: 0 auto;
+
+body {
+    background-color: $mainColor;
+    color: $bodyText;
+    // font-weight: map-get($fontWeight, med);
+    font-weight: map-get($map: $fontWeight, $key: med);
+    font-family: $fontFamily;
+}
+header {
+    background-color: $bodyText;
+    color: $mainColor;
+    padding: 1em;
+
+    h1 {
+        font-size: 3.5em;
+        font-weight: map-get($fontWeight, light);
+        width: 80%;
+        margin: $margin;
+    }
+    h2 {
+        font-size: 2.75em;
+        font-weight: map-get($fontWeight, reg);
+        color: #a6cbbe;
+        width: 80%;
+        margin: $margin;
+    }
+    p {
+        width: 80%;
+        margin: $margin;
+    }
+}
+main {
+    width: 80%;
+    margin: $margin;
+
+    h2 {
+        font-size: 2em;
+        font-weight: map-get($fontWeight, reg);
+    }
+    p {
+        line-height: 1.5;
+        color: $mutedBodyText;
+
+        a {
+            color: #a46877;
+            &:hover {
+                color: #e08976;
+            }
+        }
+    }
+}
